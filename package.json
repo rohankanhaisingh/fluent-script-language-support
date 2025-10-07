@@ -1,0 +1,25 @@
+{
+  "name": "fluent-script-language-support",
+  "displayName": "Fluent Script Language Support",
+  "description": "Language support for the FluentScript programming language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "fluent-script",
+      "aliases": ["Fluent Script", "fluent-script"],
+      "extensions": [".fls","fls"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "fluent-script",
+      "scopeName": "source.fluentscript",
+      "path": "./syntaxes/fluent-script.tmLanguage.json"
+    }]
+  }
+}

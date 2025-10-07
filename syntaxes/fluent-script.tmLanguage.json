@@ -1,0 +1,100 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Fluent Script",
+	"scopeName": "source.fluentscript",
+	"fileTypes": [
+		"fls"
+	],
+	"uuid": "d25a87c4-812c-11ec-a8a3-0242ac120002",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.fluentscript",
+					"match": "\\b(import|from|return|if|else|as|or|of|while|loop|for|throw|export|type|where|try|catch)\\b"
+				},
+				{
+					"name": "keyword.other.fluentscript",
+					"match": "\\b(var|const|func|in|attach|to|true|false|void|null|class|public|private|protected|declare|constructor|this|ref|exists|interface|is|override|extends|dynamic|optional|required|default)\\b"
+				},
+				{
+					"name": "entity.name.function.fluentscript",
+					"match": "\\b(Get-|Set-|New-|Write-|Resolve-|Start-|Stop-|Read-)\\s*[a-zA-Z_][a-zA-Z0-9_-]*\\b"
+				},
+				{
+					"name": "support.class.fluentscript",
+					"match": "\\b(ScriptExecutionSource|Player|Events|EventListener|Event|Audio|AudioSources|AudioEffects|Entity|Collection|KeyboardInputEventListener|KeyboardInputEvent|HttpsRequest|HttpRequest|ThreadEvent|Process|Thread|HttpResponse|HttpsResponse|File)\\b"
+				},
+				{
+					"name": "constant.numeric.fluentscript",
+					"match": "\\b\\d+\\.\\d+|\\b\\d+\\b"
+				},
+				{
+					"name": "storage.type.fluentscript",
+					"match": "\\b(string|int|double|char|float|boolean|long|await|async|byte|unknown)\\b"
+				},
+				{
+					"name": "keyword.special.fluentscript",
+					"match": "\\b(server|thread|runtime|module|namespace|global|curval|curdir)\\b"
+				},
+				{
+					"name": "keyword.operator.fluentscript",
+					"match": "-(eq|neq|and|lt|mt|lessthan|morethan)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.fluentscript",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.fluentscript",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.fluentscript",
+					"begin": "//",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.fluentscript"
+						}
+					},
+					"end": "$\\n?",
+					"patterns": []
+				},
+				{
+					"name": "comment.block.fluentscript",
+					"begin": "/\\*",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.fluentscript"
+						}
+					},
+					"end": "\\*/",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.fluentscript"
+						}
+					},
+					"patterns": []
+				}
+			]
+		}
+	}
+}
