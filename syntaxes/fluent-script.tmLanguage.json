@@ -15,6 +15,9 @@
 		},
 		{
 			"include": "#comments"
+		},
+		{
+			"include": "#decorators"
 		}
 	],
 	"repository": {
@@ -22,19 +25,19 @@
 			"patterns": [
 				{
 					"name": "keyword.control.fluentscript",
-					"match": "\\b(import|from|return|if|else|as|or|of|while|loop|for|throw|export|type|where|try|catch)\\b"
+					"match": "\\b(import|from|return|if|else|as|or|of|while|loop|for|throw|export|type|where|try|catch|in|switch|case|break|point)\\b"
 				},
 				{
 					"name": "keyword.other.fluentscript",
-					"match": "\\b(var|const|func|in|attach|to|true|false|void|null|class|public|private|protected|declare|constructor|this|ref|exists|interface|is|override|extends|dynamic|optional|required|default)\\b"
+					"match": "\\b(var|const|func|attach|to|true|false|void|null|class|public|private|protected|declare|constructor|this|ref|exists|interface|is|override|extends|dynamic|optional|required|default|location|struct|mutable|enum|implements)\\b"
 				},
 				{
 					"name": "entity.name.function.fluentscript",
-					"match": "\\b(Get-|Set-|New-|Write-|Resolve-|Start-|Stop-|Read-|Add-|Append-)\\s*[a-zA-Z_][a-zA-Z0-9_-]*\\b"
+					"match": "\\b(Get-|Set-|New-|Write-|Resolve-|Start-|Stop-|Read-|Add-|Append-|Is-)\\s*[a-zA-Z_][a-zA-Z0-9_-]*\\b"
 				},
 				{
 					"name": "support.class.fluentscript",
-					"match": "\\b(ScriptExecutionSource|Player|Events|EventListener|Event|Audio|AudioSources|AudioEffects|Entity|Collection|KeyboardInputEventListener|KeyboardInputEvent|HttpsRequest|HttpRequest|ThreadEvent|Process|Thread|HttpResponse|HttpsResponse|File|Exception)\\b"
+					"match": "\\b(ScriptExecutionSource|Player|Events|EventListener|Event|Audio|AudioSources|AudioEffects|Entity|Collection|KeyboardInputEventListener|KeyboardInputEvent|HttpsRequest|HttpRequest|ThreadEvent|Process|Thread|HttpResponse|HttpsResponse|File|Exception|Arguments|Comparison|Vector|Vector2|Vector3|Vector4|Int32|Int64|Float32|Float64|USize)\\b"
 				},
 				{
 					"name": "constant.numeric.fluentscript",
@@ -47,13 +50,19 @@
 				{
 					"name": "keyword.special.fluentscript",
 					"match": "\\b(server|thread|runtime|module|namespace|global|curval|curdir)\\b"
-				},
-				{
-					"name": "keyword.operator.fluentscript",
-					"match": "-(eq|neq|and|lt|mt|lessthan|morethan)\\b"
 				}
 			]
 		},
+
+		"decorators": {
+			"patterns": [
+				{
+					"name": "meta.decorator.fluentscript",
+					"match": "@[A-Za-z_][A-Za-z0-9_]*"
+				}
+			]
+		},
+
 		"strings": {
 			"name": "string.quoted.double.fluentscript",
 			"begin": "\"",
@@ -65,6 +74,7 @@
 				}
 			]
 		},
+
 		"comments": {
 			"patterns": [
 				{
