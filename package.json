@@ -1,6 +1,7 @@
 {
   "name": "fluent-script-language-support",
   "displayName": "Fluent Script Language Support",
+  "publisher": "local",
   "description": "Language support for the FluentScript programming language",
   "version": "0.0.1",
   "engines": {

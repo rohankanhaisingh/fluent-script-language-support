@@ -2,3 +2,9 @@
 .vscode-test/**
 .gitignore
 vsc-extension-quickstart.md
+.npm-cache/**
+.vscode-data/**
+.vscode-extensions/**
+*.vsix
+node-v20.17.0-linux-x64/**
+node-v20.17.0-linux-x64.tar.xz
