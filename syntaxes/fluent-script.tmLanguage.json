@@ -25,19 +25,23 @@
 			"patterns": [
 				{
 					"name": "keyword.control.fluentscript",
-					"match": "\\b(import|from|return|if|else|as|or|of|while|loop|for|throw|export|type|where|try|catch|in|switch|case|break|exit)\\b"
+					"match": "(?<![\\w-])&(pointer|address|length|alloc)\\b"
+				},
+				{
+					"name": "keyword.control.fluentscript",
+					"match": "\\b(import|from|return|if|else|as|or|of|while|loop|for|throw|export|type|where|try|catch|in|switch|case|break|exit|unsafe|is|and)\\b"
 				},
 				{
 					"name": "keyword.other.fluentscript",
-					"match": "\\b(var|func|to|true|false|void|null|class|public|private|protected|declare|constructor|this|ref|deref|exists|interface|is|override|extends|required|default|location|struct|mut|enum|implements|global|optional|namespace)\\b"
+					"match": "\\b(var|func|to|true|false|void|null|class|public|private|protected|declare|constructor|this|ref|deref|exists|interface|override|extends|required|default|location|struct|mut|enum|implements|global|optional|namespace|use|internal|binding)\\b"
 				},
 				{
 					"name": "entity.name.function.fluentscript",
-					"match": "\\b(Get-|Set-|Write-|On-|Register-|Remove-|Enumerate-|New-|Register-|Start-)\\s*[a-zA-Z_][a-zA-Z0-9_-]*\\b"
+					"match": "\\b(Get-|Set-|Write-|On-|Register-|Remove-|Enumerate-|New-|Register-|Start-|Read-|Add-|From-)\\s*[a-zA-Z_][a-zA-Z0-9_-]*\\b"
 				},
 				{
 					"name": "support.class.fluentscript",
-					"match": "\\b(Mutable|Reference|Dereferenced|Console|Math|Event|Thread)\\b"
+					"match": "\\b(Mutable|Referred|Dereferred|Console|Math|Event|Thread|Pointer|Conversion|Random|Result|Exception|ConversionException|Encoding)\\b"
 				},
 				{
 					"name": "constant.numeric.fluentscript",
@@ -45,11 +49,10 @@
 				},
 				{
 					"name": "storage.type.fluentscript",
-					"match": "\\b(string|int|int32|int64|double|char|float|float32|float64|boolean|long|await|async|byte|unknown|uint|usize)\\b"
+					"match": "\\b(string|int|int32|int64|double|char|float|float32|float64|boolean|long|await|async|byte|unknown|uint|usize|uint8|uint16|uint32|uint64)\\b"
 				}
 			]
 		},
-
 		"decorators": {
 			"patterns": [
 				{
@@ -58,7 +61,6 @@
 				}
 			]
 		},
-
 		"strings": {
 			"name": "string.quoted.double.fluentscript",
 			"begin": "\"",
@@ -70,7 +72,6 @@
 				}
 			]
 		},
-
 		"comments": {
 			"patterns": [
 				{
