@@ -25,19 +25,19 @@
 			"patterns": [
 				{
 					"name": "keyword.control.fluentscript",
-					"match": "\\b(import|from|return|if|else|as|or|of|while|loop|for|throw|export|type|where|try|catch|in|switch|case|break|exit)\\b"
+					"match": "\\b(from|return|if|else|as|or|of|while|loop|for|throw|type|where|try|catch|in|switch|case|break|exit|is|unsafe)\\b"
 				},
 				{
 					"name": "keyword.other.fluentscript",
-					"match": "\\b(var|func|to|true|false|void|null|class|public|private|protected|declare|constructor|this|ref|deref|exists|interface|is|override|extends|required|default|location|struct|mut|enum|implements|global|optional|namespace)\\b"
+					"match": "\\b(var|func|to|true|false|void|null|class|public|private|protected|declare|constructor|this|ref|deref|exists|interface|override|extends|required|default|location|struct|mut|enum|implements|global|use|namespace|optional)\\b"
 				},
 				{
 					"name": "entity.name.function.fluentscript",
-					"match": "\\b(Get-|Set-|Write-|On-|Register-|Remove-|Enumerate-|New-|Register-|Start-)\\s*[a-zA-Z_][a-zA-Z0-9_-]*\\b"
+					"match": "\\b(Get-|Set-|Write-|On-|Register-|Remove-|Enumerate-|New-|Register-|Start-|Add-)\\s*[a-zA-Z_][a-zA-Z0-9_-]*\\b"
 				},
 				{
 					"name": "support.class.fluentscript",
-					"match": "\\b(Mutable|Reference|Dereferenced|Console|Math|Event|Thread)\\b"
+					"match": "\\b(Mutable|Reference|Dereferenced|Console|Math|Event|Thread|Exception)\\b"
 				},
 				{
 					"name": "constant.numeric.fluentscript",
